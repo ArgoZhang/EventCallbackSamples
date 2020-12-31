@@ -1,0 +1,16 @@
+﻿<tr class="@RowClassString" @onclick="@ClickRow">
+    <td>Cell1</td>
+    <td>Cell2</td>
+    <td>Cell3</td>
+</tr>
+
+@code {
+    private string RowClassString => Active ? "active" : null;
+
+    private bool Active;
+
+    private void ClickRow()
+    {
+        Active = !Active;
+    }
+}

@@ -1,0 +1,34 @@
+﻿@page "/test1"
+
+<table class="table table_test" @ref="@TableElement">
+    <thead>
+        <tr>
+            <td>Col1</td>
+            <td>Col2</td>
+            <td>Col3</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr data-index="0" class="active">
+            <td>Cell11</td>
+            <td>Cell12</td>
+            <td>Cell13</td>
+        </tr>
+        <tr data-index="1">
+            <td>Cell21</td>
+            <td>Cell22</td>
+            <td>Cell23</td>
+        </tr>
+    </tbody>
+</table>
+
+<button @onclick="@UpdatePage">刷新页面</button>
+
+<div>当前选中行 @CurrentRowIndex</div>
+
+<style>
+    .table_test tbody tr.active {
+        background-color: #0094ff;
+        color: #fff;
+    }
+</style>

@@ -1,0 +1,37 @@
+﻿<tr class="@RowClassString" @onclick="@ClickRow">
+    <td>Cell1</td>
+    <td>Cell2</td>
+    <td>Cell3</td>
+</tr>
+
+@code {
+    private string RowClassString => Active ? "active" : null;
+
+    private bool Active;
+
+    private void ClickRow()
+    {
+        Dispatch?.Reset();
+        Active = true;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        if (Dispatch != null)
+        {
+            Dispatch.ResetActive += () =>
+            {
+                Active = false;
+                StateHasChanged();
+                //await InvokeAsync(() =>
+                //{
+                //});
+            };
+        }
+    }
+
+    [CascadingParameter]
+    private RowClickEvent Dispatch { get; set; }
+}

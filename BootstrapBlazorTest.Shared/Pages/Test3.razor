@@ -1,0 +1,28 @@
+﻿@page "/test3"
+
+<table class="table table_test">
+    <thead>
+        <tr>
+            <td>Col1</td>
+            <td>Col2</td>
+            <td>Col3</td>
+        </tr>
+    </thead>
+    <tbody>
+        <CascadingValue Value="Dispatch" IsFixed="true">
+            <TableRow2 />
+            <TableRow2 />
+        </CascadingValue>
+    </tbody>
+</table>
+
+<style>
+    .table_test tbody tr.active {
+        background-color: #0094ff;
+        color: #fff;
+    }
+</style>
+
+@code {
+    private RowClickEvent Dispatch { get; set; } = new RowClickEvent();
+}

@@ -1,0 +1,16 @@
+﻿@for (var index = 0; index < 2; index++)
+{
+    <tr class="@GetRowClassString(index)" @onclick="@(e => ClickRow(index))">
+        <td>Cell1</td>
+        <td>Cell1</td>
+        <td>Cell1</td>
+    </tr>
+}
+
+@code {
+    private string GetRowClassString(int index) => index == SelectedIndex ? "active" : null;
+
+    private int SelectedIndex { get; set; }
+
+    private void ClickRow(int index) => SelectedIndex = index;
+}
