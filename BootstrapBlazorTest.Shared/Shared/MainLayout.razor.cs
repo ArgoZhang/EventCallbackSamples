@@ -42,7 +42,8 @@ namespace BootstrapBlazorTest.Shared.Shared
             new MenuItem() { Text = "Test1", Icon = "fa fa-fw fa-fa", Url = "test1" },
             new MenuItem() { Text = "Test2", Icon = "fa fa-fw fa-fa", Url = "test2" },
             new MenuItem() { Text = "Test3", Icon = "fa fa-fw fa-fa", Url = "test3" },
-            new MenuItem() { Text = "Test4", Icon = "fa fa-fw fa-fa", Url = "test4" }
+            new MenuItem() { Text = "Test4", Icon = "fa fa-fw fa-fa", Url = "test4" },
+            new MenuItem() { Text = "Test5", Icon = "fa fa-fw fa-fa", Url = "test5" }
         };
     }
 }
