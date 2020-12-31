@@ -23,11 +23,11 @@
         {
             Dispatch.ResetActive += () =>
             {
-                Active = false;
-                StateHasChanged();
-                //await InvokeAsync(() =>
-                //{
-                //});
+                if (Active)
+                {
+                    Active = false;
+                    StateHasChanged();
+                }
             };
         }
     }
